@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Кнопка Меню -->
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Меню"
+        android:elevation="6dp"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.121" />
+
+    <!-- Фон меню -->
+    <ImageView
+        android:id="@+id/menuBackground"
+        android:layout_width="48dp"
+        android:layout_height="96dp"
+        android:background="@drawable/bg_menu"
+        android:elevation="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.141" />
+
+    <!-- Кнопка закрытия -->
+    <ImageButton
+        android:id="@+id/btnClose"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Закрыть меню"
+        android:elevation="5dp"
+        android:src="@drawable/ic_close"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Кнопка Bluetooth -->
+    <ImageButton
+        android:id="@+id/btnBluetooth"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Bluetooth"
+        android:elevation="5dp"
+        android:src="@drawable/ic_disconnect_blutooth"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/btnClose"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnClose"
+        app:layout_constraintTop_toBottomOf="@+id/btnClose" />
+
+    <!-- Список устройств -->
+    <ListView
+        android:id="@+id/deviceListView"
+        android:layout_width="245dp"
+        android:layout_height="178dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Стрелка Вверх -->
+    <ImageButton
+        android:id="@+id/btnUp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="88dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Вперед"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Стрелка Вниз -->
+    <ImageButton
+        android:id="@+id/btnDown"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Назад"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintEnd_toEndOf="@+id/btnUp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btnUp"
+        app:layout_constraintTop_toBottomOf="@+id/btnUp" />
+
+    <!-- Стрелка Влево -->
+    <ImageButton
+        android:id="@+id/btnLeft"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginRight="600dp"
+        android:layout_marginTop="140dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Налево"
+        android:src="@drawable/ic_arrow_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.643"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.545" />
+
+    <!-- Стрелка Вправо -->
+    <ImageButton
+        android:id="@+id/btnRight"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="44dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Направо"
+        android:src="@drawable/ic_arrow_right"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLeft"
+        app:layout_constraintStart_toEndOf="@+id/btnLeft"
+        app:layout_constraintTop_toTopOf="@+id/btnLeft"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Кнопка Остановки -->
+    <ImageButton
+        android:id="@+id/btnStop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Остановить"
+        android:src="@drawable/ic_stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.912" />
+
+    <!-- Новая кнопка с иконкой ic_signal -->
+
+    <!-- Кнопка Левого Света (над btnLeft) -->
+
+    <ImageButton
+        android:id="@+id/btnSignal"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Сигнал"
+        android:src="@drawable/ic_signal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
+
+    <ImageButton
+        android:id="@+id/btnLightLeft"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Левый свет"
+        android:src="@drawable/ic_light_left"
+        app:layout_constraintBottom_toTopOf="@+id/btnLeft"
+        app:layout_constraintEnd_toEndOf="@+id/btnLeft"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/btnLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Кнопка Включения Света (между btnLightLeft и btnLightRight) -->
+    <ImageButton
+        android:id="@+id/btnLightOn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Включить свет"
+        android:src="@drawable/ic_light_on"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLightLeft"
+        app:layout_constraintEnd_toStartOf="@+id/btnLightRight"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/btnLightLeft"
+        app:layout_constraintTop_toTopOf="@+id/btnLightLeft"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Кнопка Выключения Света (на том же месте, что btnLightOn) -->
+
+    <!-- Кнопка Правого Света (над btnRight) -->
+    <ImageButton
+        android:id="@+id/btnLightOff"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Выключить свет"
+        android:src="@drawable/ic_light_off"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLightOn"
+        app:layout_constraintEnd_toEndOf="@+id/btnLightOn"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/btnLightOn"
+        app:layout_constraintTop_toTopOf="@+id/btnLightOn"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <ImageButton
+        android:id="@+id/btnLightRight"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Правый свет"
+        android:src="@drawable/ic_light_right"
+        app:layout_constraintBottom_toBottomOf="@+id/btnLightLeft"
+        app:layout_constraintEnd_toEndOf="@+id/btnRight"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="@+id/btnRight"
+        app:layout_constraintTop_toTopOf="@+id/btnLightLeft"
+        app:layout_constraintVertical_bias="1.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

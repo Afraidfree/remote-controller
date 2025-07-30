@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Coursework</string>
+    <string name="stop">Stop</string>
+    <string name="rightButton">right</string>
+    <string name="leftButton">left</string>
+    <string name="upButton">up</string>
+    <string name="downButton">down</string>
+    <string name="port">Для більш зручного використання переверніть телефон</string>
+</resources>

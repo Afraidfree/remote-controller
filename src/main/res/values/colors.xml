@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="day">#673AB7</color>
+    <color name="night">#2B0437</color>
+    <color name="button">#C10707</color>
+    <color name="driveButton">#E3A9FF</color>
+</resources>
